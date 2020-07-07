@@ -57,6 +57,8 @@
 
 .mem label, .fa {
     color:#bdc1c7;
+    margin-left: 7px;
+    margin-right: 6px;
 
 }
 
@@ -71,14 +73,36 @@
     width: 18px; 
 }
 
-.ncheck:checked + .lab {
-    color: black;
+input:checked + label, 
+input:checked + i {
+    color: black !important;
     font-weight: bold;    
   }
 
-.mem input[type="checkbox"]:checked +label:after {
-    background-color: #66bb6a;
-    border-color: #66bb6a;
+/* Hide the browser's default checkbox */
+.mem input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+span {
+    position: absolute;
+    bottom: 6px;
+    right: 11px;
+    height: 25px;
+    width: 25px;
+    background-color:white;
+    border: 1px solid slategrey;
+    
+  border-radius: 15px;
+  }
+
+  .mem input:checked ~ span {
+    border: 1px solid green;
   }
 
  .last_line {
