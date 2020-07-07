@@ -1,6 +1,5 @@
 
 * {
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -20,7 +19,6 @@
     margin-left: 30px;
     margin-bottom: 40px;
     color: #5f7897;
-    
 } 
 
 .centered {
@@ -29,6 +27,7 @@
     align-items: center;
     justify-content: center;
 }
+
 #search {
     flex: 1 0 0;
     border-top-style: hidden;
@@ -39,28 +38,26 @@
     width: 345px;
     outline: white;
     margin-bottom: 22px;
-
 }
 
 .mem {
     flex: 1 0 0;
     width: 345px;
     margin-bottom: 24px;
-
 }
 
 .mem div {
     height: 38px;
     border :1px solid #bdc1c7;
     margin: 5px 5px;
-
-}
-.mem label {
-    color:#bdc1c7;
-}
-
-.mem div {
+    display: flex;
+    align-items: center;
     position: relative;
+}
+
+.mem label, .fa {
+    color:#bdc1c7;
+
 }
 
 .mem input[type="checkbox"]{    
@@ -71,24 +68,18 @@
     right: 10px;
     position: absolute;
     bottom: 10px;
-    width: 18px;
-    
-    
+    width: 18px; 
 }
-.ncheck:checked + .lab {
-    font-weight: bold;
-  }
 
+.ncheck:checked + .lab {
+    color: black;
+    font-weight: bold;    
+  }
 
 .mem input[type="checkbox"]:checked +label:after {
     background-color: #66bb6a;
     border-color: #66bb6a;
   }
-/*
-.mem_buttons:checked {
-
-}
- */
 
  .last_line {
     display: flex;
@@ -96,6 +87,7 @@
     justify-content: center;
     
  }
+
  button {
      border-radius: 5px;
      width: 116px;
