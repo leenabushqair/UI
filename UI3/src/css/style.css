@@ -1,0 +1,120 @@
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: black; 
+    font-size: 14px;  
+}
+
+.container {
+    width: 518px;
+    min-height: 531px;
+    margin: 20px auto;
+    background-color: white;     
+}
+.ps {
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    color: #5f7897;
+    
+} 
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#search {
+    flex: 1 0 0;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    padding: 10px;
+    width: 345px;
+    outline: white;
+    margin-bottom: 22px;
+
+}
+
+.mem {
+    flex: 1 0 0;
+    width: 345px;
+    margin-bottom: 24px;
+
+}
+
+.mem div {
+    height: 38px;
+    border :1px solid #bdc1c7;
+    margin: 5px 5px;
+
+}
+.mem label {
+    color:#bdc1c7;
+}
+
+.mem div {
+    position: relative;
+}
+
+.mem input[type="checkbox"]{    
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: initial;
+    height: 18px;
+    right: 10px;
+    position: absolute;
+    bottom: 10px;
+    width: 18px;
+    
+    
+}
+.ncheck:checked + .lab {
+    font-weight: bold;
+  }
+
+
+.mem input[type="checkbox"]:checked +label:after {
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+  }
+/*
+.mem_buttons:checked {
+
+}
+ */
+
+ .last_line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
+ button {
+     border-radius: 5px;
+     width: 116px;
+     height: 36px;
+     outline: white;
+ }
+
+ .cancel {
+     background-color: white;
+     border-color: #bdc1c7;
+     color: #bdc1c7;
+     margin-right: 20px;
+
+ }
+
+ .save {
+    background: rgb(108,183,255);
+    background: linear-gradient(90deg, rgba(108,183,255,1) 0%, rgba(114,158,255,1) 36%, rgba(119,141,255,1) 100%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 12px rgba(0, 0, 0, 0.12),
+    0 16px 15px rgba(0, 0, 0, 0.2);
+    color: honeydew;
+ }
