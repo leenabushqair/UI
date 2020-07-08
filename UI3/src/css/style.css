@@ -2,10 +2,15 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    color: black; 
-    font-size: 14px;  
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* , *::before, *::after {
+    box-sizing: inherit;
 }
 
 .container {
@@ -14,10 +19,10 @@
     margin: 20px auto;
     background-color: white;     
 }
+
 .ps {
     padding-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 40px;
+    margin: 0 0 40px 30px;
     color: #5f7897;
 } 
 
@@ -28,7 +33,19 @@
     justify-content: center;
 }
 
-#search {
+.first-line {
+    position: relative;
+
+}
+
+.first-line i {
+    position: absolute;
+    top:12px;
+    left: 0;
+}
+
+
+.search {
     flex: 1 0 0;
     border-top-style: hidden;
     border-right-style: hidden;
@@ -38,91 +55,95 @@
     width: 345px;
     outline: white;
     margin-bottom: 22px;
+    padding-left: 20px;
 }
 
-.mem {
+.all_mem {
     flex: 1 0 0;
-    width: 345px;
     margin-bottom: 24px;
 }
-
-.mem div {
-    height: 38px;
-    border :1px solid #bdc1c7;
-    margin: 5px 5px;
+.member {
+    width: 345px;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    position: relative;
-}
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
 
-.mem label, .fa {
-    color:#bdc1c7;
+  i{
+    margin-right: 1rem;
+    color:black;
+  }
+
+  .member_name {
+    color:black;
     margin-left: 7px;
-    margin-right: 6px;
+    margin-right: auto;
+  }
 
-}
+  .member_status {
+    position: relative;
+  }
 
-.mem input[type="checkbox"]{    
+    /* Create a custom checkbox */
+.member_status label {
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: initial;
-    height: 18px;
-    right: 10px;
-    position: absolute;
-    bottom: 10px;
-    width: 18px; 
-}
-
-input:checked + label, 
-input:checked + i {
-    color: black !important;
-    font-weight: bold;    
-  }
-
-/* Hide the browser's default checkbox */
-.mem input {
-    position: absolute;
-    opacity: 0;
+    border: 1px solid black;
+    border-radius: 50%;
     cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  /* Create a custom checkbox */
-span {
+    height: 22px;
+    left: 0;
     position: absolute;
-    bottom: 6px;
-    right: 11px;
-    height: 25px;
-    width: 25px;
-    background-color:white;
-    border: 1px solid slategrey;
-    
-  border-radius: 15px;
+    top: -2.5px;
+    width: 22px;
   }
-
-  .mem input:checked ~ span {
-    border: 1px solid green;
+ 
+.member_status label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 4px;
+    left: 4px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transform: rotate(-45deg);
+    width: 12px;
+  }
+  
+  .member_status input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .member_status input[type="checkbox"]:checked + label {
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+  }
+  
+  .member_status input[type="checkbox"]:checked + label:after {
+    opacity: 1;
   }
 
  .last_line {
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
  }
 
- button {
-     border-radius: 5px;
+.btn{
+    border-radius: 5px;
      width: 116px;
      height: 36px;
      outline: white;
- }
+}     
 
  .cancel {
      background-color: white;
-     border-color: #bdc1c7;
-     color: #bdc1c7;
+     border-color: black;
+     color: black;
      margin-right: 20px;
 
  }
@@ -133,4 +154,5 @@ span {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 12px rgba(0, 0, 0, 0.12),
     0 16px 15px rgba(0, 0, 0, 0.2);
     color: honeydew;
+    border: none;
  }
